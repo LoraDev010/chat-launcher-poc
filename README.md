@@ -332,16 +332,6 @@ Socket.io Client
 - Input sanitization (max 1000 caracteres por mensaje)
 - CORS abierto (*) - configurar en producción
 
-## Roadmap
-
-- [ ] Persistencia de mensajes en DB
-- [ ] Autenticación con JWT
-- [ ] Salas privadas con contraseña
-- [ ] Upload de archivos/imágenes
-- [ ] Notificaciones push
-- [ ] CI/CD con GitHub Actions
-- [ ] Deploy a producción (Railway/Fly.io)
-
 ## Licencia
 
 MIT
