@@ -106,18 +106,32 @@ git submodule update --init --recursive
 
 ### Variables de Entorno
 
-Cada submódulo puede tener su propio `.env`:
+El proyecto incluye archivos `.env.example` en cada nivel para facilitar la configuración. Cópialos a `.env` y ajusta los valores según sea necesario. Si no creas un archivo `.env`, el proyecto usará valores por defecto.
+
+**Raíz del proyecto (.env):**
+```env
+BACKEND_PORT=3000
+FRONTEND_PORT=5173
+NODE_ENV=development
+```
 
 **Backend (chat/server/.env):**
 ```env
 PORT=3000
 NODE_ENV=development
+DB_PATH=./rooms.db
+CORS_ORIGIN=*
 ```
 
 **Frontend (chat/client/.env):**
 ```env
-# Si necesitas configurar la URL del backend
-VITE_API_URL=http://localhost:3000
+VITE_SERVER_URL=http://localhost:3000
+```
+
+Para empezar rápidamente sin configuración:
+```bash
+# Los valores por defecto funcionan sin necesidad de crear archivos .env
+docker-compose up
 ```
 
 ## 📝 Development Workflow
