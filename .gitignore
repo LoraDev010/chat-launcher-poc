@@ -1,0 +1,25 @@
+# Dependencies (en submodules)
+chat/client/node_modules/
+chat/server/node_modules/
+
+# Build outputs (en submodules)
+chat/client/dist/
+chat/server/dist/
+chat/server/coverage/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+
+# Editor directories
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Agentes personalizados (no versionar)
+.github/agents/

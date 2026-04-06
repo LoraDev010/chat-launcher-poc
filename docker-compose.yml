@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./chat/server
+      dockerfile: Dockerfile
+    container_name: chat-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    volumes:
+      - ./chat/server:/app
+      - /app/node_modules
+    command: npm run dev
+    networks:
+      - chat-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./chat/client
+      dockerfile: Dockerfile
+    container_name: chat-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:3000
+    volumes:
+      - ./chat/client:/app
+      - /app/node_modules
+    command: npm run dev -- --host
+    depends_on:
+      - backend
+    networks:
+      - chat-network
+    restart: unless-stopped
+
+networks:
+  chat-network:
+    driver: bridge
