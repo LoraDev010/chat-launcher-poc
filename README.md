@@ -2,7 +2,7 @@
 
 Sistema de chat en tiempo real con arquitectura modular, dividido en frontend y backend como submódulos independientes.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Con Docker Compose (Recomendado)
 
@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 agentes/
@@ -56,7 +56,7 @@ agentes/
     └── server/  →  submódulo → chat-backend
 ```
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ### Frontend (React + Vite + Socket.io)
 - Arquitectura modular basada en features
@@ -70,7 +70,7 @@ agentes/
 - Testing con Jest (>80% coverage)
 - Sin persistencia (memoria)
 
-## 📦 Submódulos
+## Submódulos
 
 Este proyecto usa Git submodules para mantener frontend y backend en repositorios separados:
 
@@ -93,16 +93,16 @@ git clone --recurse-submodules <repo-url>
 git submodule update --init --recursive
 ```
 
-## 🛠️ Features
+## Features
 
-- ✅ Salas de chat públicas
-- ✅ Mensajes en tiempo real
-- ✅ Indicador de "escribiendo..."
-- ✅ Lista de usuarios en sala
-- ✅ Emojis
-- ✅ Sin registro (solo alias)
+- Salas de chat públicas
+- Mensajes en tiempo real
+- Indicador de "escribiendo..."
+- Lista de usuarios en sala
+- Emojis
+- Sin registro (solo alias)
 
-## 🔧 Configuración
+## Configuración
 
 ### Variables de Entorno
 
@@ -134,7 +134,7 @@ Para empezar rápidamente sin configuración:
 docker-compose up
 ```
 
-## 📝 Development Workflow
+## Development Workflow
 
 ### Trabajar en un submódulo
 
@@ -159,7 +159,7 @@ git commit -m "chore: actualizar frontend a versión X"
 git push
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Backend tests
@@ -172,7 +172,7 @@ cd chat/client
 npm test
 ```
 
-## 🐳 Docker
+## Docker
 
 El `docker-compose.yml` orquesta:
 - Servicio backend (Node.js)
@@ -180,14 +180,14 @@ El `docker-compose.yml` orquesta:
 - Network compartida
 - Volúmenes para node_modules
 
-## 📚 Documentación
+## Documentación
 
 - [Frontend README](chat/client/README.md)
 - [Backend README](chat/server/README.md)
 - [Instrucciones de Arquitectura](.github/instructions/)
 - [Agentes Personalizados](.github/agents/)
 
-## 🤝 Contribuir
+## Contribuir
 
 1. Fork de los repos necesarios (launcher, frontend, backend)
 2. Crear feature branch
@@ -196,7 +196,7 @@ El `docker-compose.yml` orquesta:
 5. Crear Pull Request al repo correspondiente
 6. Actualizar launcher si es necesario
 
-## 📄 Licencia
+## Licencia
 
 MIT (o la que prefieras)
 
